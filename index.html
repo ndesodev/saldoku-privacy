@@ -1,1 +1,591 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — SaldoKu: Cek Saldo e-Money NFC</title>
+  <meta name="description" content="Kebijakan Privasi resmi aplikasi SaldoKu: Cek Saldo e-Money NFC oleh ndesodev. Pemrosesan data kartu 100% lokal & aman di perangkat Anda.">
+  <meta name="robots" content="index, follow">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Modern smooth highlight scroll target */
+    :target {
+      scroll-margin-top: 5rem;
+    }
+
+    /* Print styles for Google Play Store review export */
+    @media print {
+      header, nav, #mobile-toc-bar, #copy-toast, .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: #111827 !important;
+        font-size: 11pt;
+      }
+      .card-box {
+        border: 1px solid #e5e7eb !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+      }
+      a {
+        text-decoration: underline !important;
+        color: #000 !important;
+      }
+    }
+
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f8fafc;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-900 min-h-screen flex flex-col">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-sm ring-1 ring-emerald-500/20">
+          <!-- NFC Wave Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12 18.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="text-base font-bold text-slate-900 tracking-tight block leading-tight">SaldoKu</span>
+          <span class="text-xs text-slate-500 font-medium">Privacy Policy</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/ndesodev" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span class="hidden sm:inline">ndesodev</span>
+        </a>
+        <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 rounded-lg transition-colors shadow-2xs">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24-1.076-.642-2.072-1.18-2.973A9.972 9.972 0 014.28 7.5a9.96 9.96 0 016.97-2.92c2.4 0 4.63.85 6.38 2.27.7.57 1.32 1.23 1.85 1.98a9.97 9.97 0 011.18 2.973m-13.94 2.05A6.002 6.002 0 0012 18a6 6 0 005.06-2.768M6.72 13.83A6.002 6.002 0 0112 12a6 6 0 015.28 1.829M6 18h12v4H6v-4zM6 8h12V4H6v4z"/></svg>
+          <span class="hidden sm:inline">Cetak / PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-white border-b border-slate-200 py-8 sm:py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Top Badges -->
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          100% On-Device Processing
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">
+          🛡️ Zero Server Storage
+        </span>
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
+          Berlaku: 25 September 2026
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+        Kebijakan Privasi (Privacy Policy)
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
+        Transparansi lengkap mengenai cara <span class="font-semibold text-slate-900">SaldoKu: Cek Saldo e-Money NFC</span> memperlakukan data Anda. Kami mengutamakan privasi dengan prinsip pemrosesan data murni di dalam perangkat (offline-first).
+      </p>
+
+      <!-- App Meta Grid Cards (Mobile optimized) -->
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        
+        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+          <p class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">Nama Aplikasi</p>
+          <p class="font-bold text-slate-800 text-sm mt-0.5 truncate">SaldoKu: Cek Saldo e-Money NFC</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+          <p class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">Pengembang (Developer)</p>
+          <p class="font-bold text-slate-800 text-sm mt-0.5">ndesodev</p>
+        </div>
+
+        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between">
+          <div class="min-w-0 pr-2">
+            <p class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">Package Name</p>
+            <p class="font-mono text-xs font-medium text-slate-700 truncate mt-0.5" id="pkg-text">com.ndesodev.infoceksaldokartuemoney</p>
+          </div>
+          <button onclick="copyToClipboard('com.ndesodev.infoceksaldokartuemoney', 'Package name disalin!')" 
+                  title="Salin package name"
+                  class="p-2 text-slate-500 hover:text-emerald-600 hover:bg-white rounded-lg border border-transparent hover:border-slate-200 transition-all flex-shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-1 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Desktop Left Sticky Sidebar (TOC) -->
+      <aside class="hidden lg:block lg:col-span-4 sticky top-24 space-y-4">
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs">
+          <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase mb-3">Daftar Isi Kebijakan</h3>
+          <nav class="space-y-1 text-sm font-medium text-slate-600" id="toc-nav">
+            <a href="#intro" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">1. Pendahuluan</a>
+            <a href="#data-collection" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">2. Pengumpulan & Penggunaan Data</a>
+            <a href="#third-party" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">3. Iklan & Layanan Pihak Ketiga</a>
+            <a href="#permissions" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">4. Izin Perangkat (Permissions)</a>
+            <a href="#security" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">5. Keamanan Data</a>
+            <a href="#children" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">6. Privasi Anak-Anak</a>
+            <a href="#changes" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">7. Pembaruan Kebijakan</a>
+            <a href="#contact" class="toc-link block px-3 py-2 rounded-lg hover:text-emerald-600 hover:bg-slate-50 transition-all">8. Kontak Pengembang</a>
+          </nav>
+
+          <!-- Safe Box Alert in Sidebar -->
+          <div class="mt-6 pt-5 border-t border-slate-100">
+            <div class="bg-emerald-50 rounded-xl p-3.5 border border-emerald-100 text-xs leading-relaxed text-emerald-900">
+              <span class="font-bold flex items-center gap-1.5 text-emerald-800 mb-1">
+                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/></svg>
+                Jaminan Tanpa Server
+              </span>
+              Saldo kartu dan nomor kartu Anda tidak pernah dikirim ke internet atau server kami. Pemrosesan chip NFC terjadi 100% di CPU perangkat Anda.
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="lg:col-span-8 space-y-8">
+
+        <!-- Mobile Horizontal TOC Pills -->
+        <div class="lg:hidden flex items-center gap-2 overflow-x-auto pb-2 pt-1 no-scrollbar text-xs font-semibold text-slate-700">
+          <a href="#intro" class="px-3 py-1.5 bg-white border border-slate-200 rounded-full whitespace-nowrap active:bg-slate-100">Pendahuluan</a>
+          <a href="#data-collection" class="px-3 py-1.5 bg-white border border-slate-200 rounded-full whitespace-nowrap active:bg-slate-100">Data NFC</a>
+          <a href="#third-party" class="px-3 py-1.5 bg-white border border-slate-200 rounded-full whitespace-nowrap active:bg-slate-100">Iklan</a>
+          <a href="#permissions" class="px-3 py-1.5 bg-white border border-slate-200 rounded-full whitespace-nowrap active:bg-slate-100">Izin Izin</a>
+          <a href="#security" class="px-3 py-1.5 bg-white border border-slate-200 rounded-full whitespace-nowrap active:bg-slate-100">Keamanan</a>
+          <a href="#contact" class="px-3 py-1.5 bg-white border border-slate-200 rounded-full whitespace-nowrap active:bg-slate-100">Kontak</a>
+        </div>
+
+        <!-- 1. Introduction -->
+        <section id="intro" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-2xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">1</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Pendahuluan (Introduction)</h2>
+          </div>
+          
+          <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-3.5 text-sm sm:text-base">
+            <p>
+              Terima kasih telah menggunakan aplikasi <strong class="text-slate-900 font-semibold">SaldoKu: Cek Saldo e-Money NFC</strong> (&quot;Aplikasi&quot;), yang dikembangkan oleh <strong class="text-slate-900 font-semibold">ndesodev</strong>. Dokumen Kebijakan Privasi ini menerangkan bagaimana informasi ditangani, digunakan, dan dilindungi saat Anda mengoperasikan Aplikasi.
+            </p>
+            <p>
+              Kami memiliki komitmen penuh dalam melindungi privasi Anda. Aplikasi ini didesain secara arsitektural untuk bekerja dengan prinsip <span class="bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded font-medium">offline-first</span>, sehingga kami tidak menyelenggarakan server penyimpanan eksternal untuk menyimpan data kartu pengguna.
+            </p>
+            <p class="text-xs sm:text-sm text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200">
+              Dengan mengunduh, memasang, atau menggunakan Aplikasi ini, Anda menyatakan telah membaca, memahami, dan menyetujui ketentuan pemrosesan informasi sesuai Kebijakan Privasi ini.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Data Collection and Usage -->
+        <section id="data-collection" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-2xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">2</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Pengumpulan & Penggunaan Data</h2>
+          </div>
+
+          <div class="space-y-6 text-sm sm:text-base text-slate-600 leading-relaxed">
+            
+            <!-- A. NFC -->
+            <div class="border border-emerald-200 bg-emerald-50/40 rounded-xl p-5">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-2">
+                <span class="text-emerald-600">
+                  <svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </span>
+                <h3 class="text-base sm:text-lg">A. Data Kartu NFC (100% On-Device Processing)</h3>
+              </div>
+              <ul class="space-y-2.5 text-slate-700 mt-3 list-none">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-emerald-600 font-bold mt-0.5">•</span>
+                  <span><strong>Informasi Kartu:</strong> Aplikasi membaca saldo e-money, nomor kartu, dan riwayat transaksi (log) langsung dari chip kartu prabayar Anda melalui sensor hardware <em>Near Field Communication (NFC)</em> yang ada pada smartphone Anda.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-emerald-600 font-bold mt-0.5">•</span>
+                  <span><strong>100% Pemrosesan Lokal:</strong> Seluruh parsing protokol kartu dan kalkulasi saldo diproses secara instan di dalam memori lokal ponsel Anda. Data sensitif ini <strong>TIDAK PERNAH</strong> dikirim, diunggah, disalin, atau disimpan di server cloud eksternal mana pun milik pengembang ataupun pihak ketiga.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- B. Local Storage -->
+            <div class="border border-slate-200 rounded-xl p-5 bg-white">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">B. Penyimpanan Lokal (DataStore &amp; Cadangan JSON)</h3>
+              <ul class="space-y-2.5 text-slate-700 list-none">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-slate-400 font-bold mt-0.5">•</span>
+                  <span><strong>Riwayat Pindai & Preferensi:</strong> Riwayat pemindaian dan pengaturan personal Anda tersimpan di penyimpanan internal yang terisolasi dan terenkripsi oleh sistem operasi Android melalui mekanisme <em>Android DataStore / Room Database</em>.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-slate-400 font-bold mt-0.5">•</span>
+                  <span><strong>Fitur Backup Mandiri:</strong> SaldoKu menyediakan opsi bagi Anda untuk mencadangkan (ekspor) histori secara manual ke file JSON atau file dokumen PDF lokal. File ini berada di bawah kendali penuh pengguna di folder penyimpanan yang dipilih.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- C. Bluetooth Thermal -->
+            <div class="border border-slate-200 rounded-xl p-5 bg-white">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">C. Koneksi Bluetooth (Thermal Printer)</h3>
+              <p>
+                Aplikasi meminta izin Bluetooth semata-mata untuk memindai dan menghubungkan perangkat dengan <strong>printer thermal Bluetooth</strong> guna mencetak struk fisik bukti cek saldo/transaksi. Data identitas perangkat Bluetooth tidak pernah dicatat atau dilacak di luar keperluan pencetakan struk ini.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 3. Third-Party Services & Ads -->
+        <section id="third-party" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-2xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">3</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Layanan Pihak Ketiga &amp; Iklan (Google AdMob)</h2>
+          </div>
+
+          <div class="text-sm sm:text-base text-slate-600 leading-relaxed space-y-4">
+            <p>
+              Aplikasi ini mengintegrasikan SDK periklanan dari <strong class="text-slate-900">Google AdMob</strong> untuk menampilkan iklan yang tidak mengganggu demi mendukung keberlangsungan pengembangan aplikasi secara gratis.
+            </p>
+            <p>
+              Google AdMob dapat mengumpulkan sejumlah data teknis teranonimasi sesuai dengan kebijakan mereka, termasuk:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-2">
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">ID Pengenal</span>
+                <p class="font-medium text-slate-800 text-sm mt-1">Google Advertising ID (AAID)</p>
+              </div>
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Diagnostik Jaringan</span>
+                <p class="font-medium text-slate-800 text-sm mt-1">Info Perangkat &amp; Alamat IP</p>
+              </div>
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Metrik Iklan</span>
+                <p class="font-medium text-slate-800 text-sm mt-1">Performa Tayangan Iklan &amp; Crash Log</p>
+              </div>
+            </div>
+
+            <p>
+              Pengumpulan dan pengolahan data oleh Google AdMob diatur secara independen oleh Kebijakan Privasi Google. Anda dapat meninjau cara Google memperlakukan data pada tautan berikut:
+            </p>
+
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors">
+              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+              Pelajari Kebijakan Privasi Google &amp; AdMob
+            </a>
+          </div>
+        </section>
+
+        <!-- 4. Device Permissions -->
+        <section id="permissions" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-2xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">4</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Izin Perangkat (Device Permissions)</h2>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600 mb-5">
+            SaldoKu hanya meminta izin yang mutlak diperlukan untuk mengoperasikan fungsi-fungsi aplikasi berikut:
+          </p>
+
+          <!-- Responsive Permission Cards (Easy to read on phones) -->
+          <div class="space-y-3">
+            
+            <!-- NFC Permission -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="font-mono text-xs px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded font-semibold border border-emerald-200">
+                    android.permission.NFC
+                  </span>
+                  <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium">Fitur Utama</span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Akses Hardware NFC</h4>
+                <p class="text-xs text-slate-600">Digunakan untuk mendeteksi kartu dan membaca saldo e-money seketika kartu ditempelkan di belakang ponsel.</p>
+              </div>
+            </div>
+
+            <!-- Bluetooth Permission -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="space-y-1">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="font-mono text-xs px-2 py-0.5 bg-sky-50 text-sky-700 rounded font-semibold border border-sky-200">
+                    BLUETOOTH_CONNECT
+                  </span>
+                  <span class="font-mono text-xs px-2 py-0.5 bg-sky-50 text-sky-700 rounded font-semibold border border-sky-200">
+                    BLUETOOTH_SCAN
+                  </span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Akses Bluetooth Printer</h4>
+                <p class="text-xs text-slate-600">Menemukan dan mentransmisikan format cetak struk fisik ke printer thermal mini portabel.</p>
+              </div>
+            </div>
+
+            <!-- Internet Permission -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="font-mono text-xs px-2 py-0.5 bg-amber-50 text-amber-700 rounded font-semibold border border-amber-200">
+                    android.permission.INTERNET
+                  </span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Akses Jaringan Internet</h4>
+                <p class="text-xs text-slate-600">Semata-mata dimanfaatkan oleh pustaka Google AdMob untuk memuat materi iklan dan verifikasi konektivitas.</p>
+              </div>
+            </div>
+
+            <!-- Storage Access -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="font-mono text-xs px-2 py-0.5 bg-purple-50 text-purple-700 rounded font-semibold border border-purple-200">
+                    Storage / File Picker Access
+                  </span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Akses Penyimpanan Berkas</h4>
+                <p class="text-xs text-slate-600">Diperlukan saat Anda memilih untuk mengekspor dokumen laporan (PDF) atau memulihkan cadangan berkas JSON secara mandiri.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 5. Data Security -->
+        <section id="security" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-2xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">5</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Keamanan Data (Data Security)</h2>
+          </div>
+
+          <div class="space-y-3.5 text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p>
+              Kepercayaan Anda adalah prioritas kami. Karena seluruh data finansial, nomor kartu, dan nominal saldo dioperasikan sepenuhnya di dalam lingkungan terisolasi (sandbox) perangkat lokal:
+            </p>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-5 my-3 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-2.48 7.424l-3.32-3.32a4.5 4.5 0 010-6.364l5.656-5.657a4.5 4.5 0 016.364 0l.707.707a4.5 4.5 0 010 6.364l-5.657 5.657a4.5 4.5 0 01-6.364 0z"/></svg>
+              </div>
+              <div class="text-sm">
+                <strong class="text-slate-900 block font-semibold mb-1">Nol Risiko Kebocoran di Server</strong>
+                Tidak ada database server pihak pengembang yang menyimpan data kartu Anda, sehingga kemungkinan terjadi kebocoran basis data berskala server adalah nihil.
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-500">
+              * Kami menyarankan Anda tetap menjaga keamanan fisik perangkat (seperti menggunakan kunci layar PIN, Pola, atau Biometrik) agar riwayat transaksi lokal tidak dilihat oleh orang yang tidak berhak.
+            </p>
+          </div>
+        </section>
+
+        <!-- 6. Children's Privacy -->
+        <section id="children" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-2xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">6</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Privasi Anak-Anak (Children's Privacy)</h2>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Aplikasi SaldoKu tidak ditujukan untuk anak-anak di bawah usia 13 tahun. Kami tidak pernah dengan sengaja mengumpulkan informasi pribadi yang dapat diidentifikasi dari anak-anak di bawah usia 13 tahun. Jika Anda adalah orang tua atau wali dan mengetahui bahwa anak Anda telah memberikan data pribadi kepada pihak ketiga periklanan kami, silakan hubungi kami agar kami dapat mengambil tindakan korektif seperlunya.
+          </p>
+        </section>
+
+        <!-- 7. Changes to This Privacy Policy -->
+        <section id="changes" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-2xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">7</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Perubahan Kebijakan Privasi</h2>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu guna menyesuaikan kepatuhan hukum atau pembaruan fitur aplikasi. Setiap revisi akan langsung berlaku efektif setelah dipublikasikan pada halaman ini. Anda dianjurkan untuk memeriksa laman kebijakan ini secara berkala.
+          </p>
+        </section>
+
+        <!-- 8. Contact Us -->
+        <section id="contact" class="bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 card-box shadow-xs">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm">8</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Hubungi Kami (Contact Us)</h2>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
+            Apabila Anda memiliki pertanyaan, masukan, permohonan klarifikasi, atau keluhan terkait Kebijakan Privasi ini, silakan hubungi tim pengembang kami melalui:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Email Box -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-white flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Email Developer</span>
+                <span class="text-sm font-mono font-semibold text-slate-800 break-all mt-1 block">ndesodev@gmail.com</span>
+              </div>
+              <div class="mt-4 flex items-center gap-2">
+                <a href="mailto:ndesodev@gmail.com" class="inline-flex items-center justify-center px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold rounded-lg transition-colors">
+                  Kirim Email
+                </a>
+                <button onclick="copyToClipboard('ndesodev@gmail.com', 'Alamat email disalin!')" 
+                        class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-lg transition-colors">
+                  Salin
+                </button>
+              </div>
+            </div>
+
+            <!-- GitHub Profile Box -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-white flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Website &amp; Portofolio</span>
+                <span class="text-sm font-semibold text-slate-800 mt-1 block">github.com/ndesodev</span>
+              </div>
+              <div class="mt-4">
+                <a href="https://github.com/ndesodev" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded-lg transition-colors">
+                  Kunjungi GitHub
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p class="font-medium text-slate-700">
+        &copy; 2026 <strong>ndesodev</strong>. Seluruh hak cipta dilindungi.
+      </p>
+      <p>
+        SaldoKu: Cek Saldo e-Money NFC &bull; Dirancang dengan standar keamanan dan privasi tinggi.
+      </p>
+      <div class="pt-2 flex items-center justify-center gap-4 text-slate-400">
+        <a href="#intro" class="hover:text-emerald-600 transition-colors">Ke Atas</a>
+        <span>&bull;</span>
+        <a href="https://github.com/ndesodev" target="_blank" class="hover:text-emerald-600 transition-colors">GitHub</a>
+        <span>&bull;</span>
+        <a href="mailto:ndesodev@gmail.com" class="hover:text-emerald-600 transition-colors">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="copy-toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold shadow-lg translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2">
+    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    <span id="toast-message">Teks berhasil disalin!</span>
+  </div>
+
+  <script>
+    // Copy helper using execCommand for safe iframe compatibility
+    function copyToClipboard(text, customMessage) {
+      try {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast(customMessage || 'Berhasil disalin ke papan klip!');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    }
+
+    // Modern floating toast display
+    function showToast(message) {
+      const toast = document.getElementById('copy-toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = message;
+      
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // ScrollSpy indicator for sidebar desktop navigation
+    window.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      const navLinks = document.querySelectorAll('#toc-nav .toc-link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('text-emerald-700', 'bg-emerald-50', 'font-semibold');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('text-emerald-700', 'bg-emerald-50', 'font-semibold');
+          }
+        });
+      }, { passive: true });
+    });
+  </script>
+</body>
+</html>
